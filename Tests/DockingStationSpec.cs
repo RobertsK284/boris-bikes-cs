@@ -24,6 +24,20 @@ namespace borisbikescs.Tests
             Assert.AreEqual(true, bike2.Working());
         }
 
+        [Test(Description = "ReleaseBike raises an error if no bikes are available")]
+     
+        public void ReleaseBike_Error()
+        {
+            // arrange
+            DockingStation dockingstation = new DockingStation();
+
+            // act
+            Bike bike2 = dockingstation.ReleaseBike();
+
+            // assert
+            Assert.That(bike2, Throws.Exception);
+        }
+
         [Test(Description = "Can Dock a bike")]
         public void Responds_to_Dock()
         {

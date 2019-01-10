@@ -5,6 +5,7 @@ namespace borisbikescs.Models
     {
         public bool Working()
         {
+            Console.WriteLine("This bike is working."); 
             return true;
         }
     }
